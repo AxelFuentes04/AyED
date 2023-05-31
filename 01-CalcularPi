@@ -4,12 +4,12 @@ using namespace std;
 	
 int main(){
 	int signo=1;
-	float pi;
-	int millon(1000000);
-	for(int i=0; i<=millon; i++){
+	float pi{0};
+	int mil{199990};
+	for(int i=0; i<mil; i++){
 	pi += signo*4/float(2*i+1);
 	signo=signo*(-1);
 }
 	cout<< "El valor pi es: "<<setprecision(6)<<fixed<<pi;
-  return 0;
+	return 0;
 }
