@@ -3,13 +3,25 @@
 using namespace std;
 	
 int main(){
-	int signo=1;
-	float pi{0};
-	int mil{250000};
-	for(int i=0; i<mil; i++){
-	pi += signo*4/float(2*i+1);
-	signo=signo*(-1);
-}
+	int i{0};	
+	double pi=0.0;
+	double parametro{0.0000001};
+	bool condicion=true;
+	
+	while(condicion){
+		double PI= 1.0/(2*i+1);
+
+		if (PI<parametro)
+		break;
+		
+		if(i%2==0){
+			pi+=PI;
+		}else{
+			pi-=PI;
+		}
+		i++;
+	}
+	pi*=4;
+	
 	cout<< "El valor de Pi es: "<<setprecision(6)<<fixed<<pi<<endl;
-	return 0;
 }
